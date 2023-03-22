@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+        }
+        .change{
+            background-color: purple;
+            color: #fff;
+            margin-top: 100px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">文本</div>
+    <script>
+        //1.使用element.style获得修改元素颜色样式  如果样式较少功能简单的情况下使用
+        var test=document.querySelector('div');
+        test.onclick=function(){
+            //test.style.backgroundColor='green';
+
+            //2.可以通过修改元素的className更改元素的样式，适用于样式较多较复杂
+            //    如果本来就有类名，则会覆盖
+            //this.className='change';
+            //如果想保留原先的类名，我们可以这样
+            this.className='first change'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead{
+            background-color: blue;
+        }
+        table{
+            border: 1px solid grey;
+        }
+        table td{
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="checkboxAll"></th>
+                <th>商品</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody id="checkbox">
+            <tr>
+                <td><input type='checkbox'></td>
+                <td>fsdfa</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><input type='checkbox'></td>
+                <td>fsdfa</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><input type='checkbox'></td>
+                <td>fsdfa</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><input type='checkbox'></td>
+                <td>fsdfa</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //获取元素
+        var checkboxAll =document.getElementById('checkboxAll');
+        var checkbox=document.getElementById('checkbox').getElementsByTagName('input');
+
+        checkboxAll.onclick=function(){
+            //this.checked;它可以得到当前复选框的选中状态，如果是true就是选中，false就是未选择
+            //
+            console.log(this.checked);
+            for(var i=0;i<checkbox.length;i++){
+                //把全选框的选中状态赋值给每个框
+                checkbox[i].checked=this.checked;
+            }
+        }
+        for(var i=0;i<checkbox.length;i++){
+                checkbox[i].onclick=function(){
+                    var flag=true;
+                    //每次点击都循环检查四个按钮是否被全部选中
+                    for(var i=0;i<checkbox.length;i++){
+                        if(checkbox[i].checked==false){
+                            flag=false;
+                            break;
+                        }
+                    }
+                    checkboxAll.checked=flag;
+                }
+         }
+    </script>
+</body>
+</html>

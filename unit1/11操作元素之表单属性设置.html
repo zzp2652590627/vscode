@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" name="" id="" value="输入内容">
+
+    <script>
+        //1.获取元素
+        var btn=document.querySelector('button');
+        var input=document.querySelector('input');
+
+        //2.注册事件  处理
+        btn.onclick=function(){
+            //input.innerHTML='点击了'; 这是普通的，不能用
+            input.value='点击了';
+            //想要某个东西被禁用 ，不能点击
+            //btn.disabled='true';
+            this.disabled='true';
+            //this  指向的是事件函数的调用者btn
+            
+        }
+        
+    </script>
+
+</body>
+</html>

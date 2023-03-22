@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .baidu{
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+        .baidu>li{
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+            text-align: center;
+            width: 100px;
+            font-size: 40px;
+        }
+        .baidu ul {
+            display: none;
+        }
+            
+        .baidu ul li{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="baidu">
+        <li>
+            <a href="#">1</a>
+            <ul>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">2</a>
+            <ul>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">3</a>
+            <ul>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">4</a>
+            <ul>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+                <li>
+                    <a href="">1a</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        //获取元素
+        var baidu=document.querySelector('.baidu');
+        var lis=baidu.children;
+        console.log(baidu.children);
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover=function(){
+                this.children[1].style.display='block';
+            }
+            lis[i].onmouseout=function(){
+                this.children[1].style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>

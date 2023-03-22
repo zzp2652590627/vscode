@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="box"></ul>
+    <ul class="box"></ul>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <script>
+        //getElementsByClassName 根据类目获取某些元素集合
+        document.getElementsByClassName('box');
+
+        //querySelector 返回指定选择器的第一个元素对象
+        console.log(document.querySelector('ul'));//标签
+        document.querySelector('.box');//class
+        document.querySelector('#box');//id
+        console.log(document.querySelector('li'));
+
+
+        //querySelectorAll 返回指定选择器的所有元素对象的集合
+        console.log(document.querySelectorAll('ul'));//标签
+        document.querySelectorAll('.box');//class
+        document.querySelectorAll('#box');//id
+
+    </script>
+</body>
+</html>

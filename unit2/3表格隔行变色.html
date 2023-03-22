@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead{
+            background-color: pink;
+        }
+        table{
+            border: 1px solid black;
+        }
+        table td{ 
+            border: 1px solid black;
+        }
+        .bg{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+                <th>净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+            <tr>
+                <td>168276318</td>
+                <td>afsfas</td>
+                <td>12321sd</td>
+                <td>1231</td>
+                <td>31231w</td>
+                <td>1swda</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //获取元素
+        var trs=document.querySelector('tbody').querySelectorAll('tr');
+
+        for(var i=0;i<trs.length;i++){
+            //鼠标经过
+            trs[i].onmouseover=function(){
+                this.className='bg';
+            }
+            //鼠标离开
+            trs[i].onmouseout=function(){
+                this.className='';
+            }
+        }
+    </script>
+</body>
+</html>
