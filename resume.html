@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>resume</title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 0px;
+		}
+		header{
+			width: 1920px;
+			height: 150px;
+			background-color: aqua;
+			display: inline-block;
+		}
+		ul{
+			
+			color: white;
+			height: 150px;
+			margin-top: 0rem;
+			margin-left: 280px;
+		}
+		ul li{
+			list-style-type: none;
+			font-size: 30px;
+			height: 150px;
+			width: 150px;
+			float: left;
+			
+			padding:50px 50px;
+
+		}
+		.pho{
+			padding: 0rem 50px; 
+		}
+		.photo{
+			width:150px;
+			
+			border-radius: 100px;
+		}
+		.xinxi{
+			height: 750px;
+			background-color: green;
+			background-size: 100%;
+		}
+		.xinxi>table{
+			padding-top:200px;
+			margin: auto;
+		}
+
+	</style>
+	<body>
+		<header>
+			<ul>
+				<li>个人信息</li>
+				<li>教育经历</li>
+				<li class="pho"><img src="12.jpg" class="photo"></li>
+				<li>专业技能</li>
+				<li>自我评价</li>
+			</ul>
+		</header>
+		<div class="xinxi">
+			<table border="0px" cellspacing="" cellpadding="20px">
+				<tr><th><h1>张曾普</h1></th></tr>
+				<tr><td>性别：男</td>
+					<td>所在地址：河南</td>
+				</tr>
+				<tr><td>年龄：21</td>
+					<td>所联系电话：15886740576</td>
+				</tr>
+				<tr><td>身份：应届毕业生</td>
+					<td>电子邮箱：Z2652590627@163.com</td>
+				</tr>
+			</table>
+		</div>
+		<div class="school">2</div>
+		<div class="tech">3</div>
+		<div class="self">4</div>
+	</body>
+	<script type="text/javascript">
+		var lis=document.querySelectorAll('li');
+		var divs=document.querySelectorAll('div');
+		for(var i=0;i<lis.length;i++){
+			if(i!=2){
+				lis[i].onclick=function(){
+					console.log(divs[0]);
+					divs[i].style.display='block';
+			
+					for(var j=0;j<lis.length;j++){
+						if(i==j){
+							break;	
+						}else{
+							divs[j].display='none';
+						}
+					}
+					
+				}
+			}
+		}
+	</script>
+</html>
